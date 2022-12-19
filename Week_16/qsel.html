@@ -8,18 +8,22 @@
     <script src="Assets/qsel.js"></script>
   </head>
   <body>
-    <table>
+    <fieldset>
       <tr>
-        <td>Enter the Input</td>
+        <td>Enter values</td>
+        </tr>
+    </br>
         <td><input type="text" id="inputtext" /></td>
       </tr>
       <tr>
-        <td></td>
-        <td>
+        
+        
           <button onClick="addRecord()">Add</button>
           <button onClick="displayAll()">Display</button>
-        </td>
+          <label for="redoutput">Sorted values: </label><input type="textbox" name="redoutput"></input>
+          <label for="sumoutput">Summarized</label><input type="textbox" name="sumoutput"></input>
+        
       </tr>
-    </table>
+    </fieldset>
   </body>
 </html>

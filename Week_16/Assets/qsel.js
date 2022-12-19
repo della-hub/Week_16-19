@@ -19,5 +19,24 @@ function addRecord() {
 }
 
 function displayAll() {
-    alert(records);
+    records.sort(function(a, b) {
+        return a - b;
+      });
+    
+    document.getElementsByName('redoutput')[0].value= records;
+    /*
+    const InitialValue = 0;
+    const sum = records.reduce((acc, current) => acc + current, InitialValue );
+    document.getElementsByName('sumoutput')[0].value= sum;
+    */
+    let sum = 0;
+    //const numbers = [65, 44, 12, 4];
+    records.forEach(myFunction);
+    
+    document.getElementById("demo").innerHTML = sum;
+    
+    function myFunction(item) {
+      sum += item;
+    }
+    document.getElementsByName('sumoutput')[0].value= sum;
 }
