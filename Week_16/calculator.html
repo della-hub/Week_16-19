@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="/Assets/Styles/calculator.css" />
+      <script src="Assets/calculator.js"></script>
+    </head>
+    <body>
+      <header>Calculator of the car cost</header>
+    <br />
+    
+      <nav>
+        <ul>
+          <li>
+            <a href="#"> Main page </a>
+          </li>
+          <li>
+            <a href="#"> Calculator </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+​
+    <main>
+      <section class="left section">
+        <form>
+          <div>
+            <h1>Here you can calculate the cost</h1>
+            <h2>Please fill out the form</h2>
+          </div>
+          <br /><br /><br /><br />
+          <div>
+            <br>
+              <legend><b>Engine</b></legend>
+            <filedset>
+              <td>
+              <div>
+                <label for="volume">Engine volume [cm^3]</label>
+                <td><input type="text" id="inputtext" /></td>
+              </div>
+            </br>
+            <div>Engine type</div>
+          <div>
+            <label for="gasoline">Gasoline</label>
+            <input type="checkbox" id="gasoline" />
+          </div>
+          <div>
+            <label for="diesel">Diesel</label>
+            <input type="checkbox" id="diesel" />
+          </div>
+          <div>
+            <label for="electric">Electric</label>
+            <input type="checkbox" id="electric" />
+          </div>
+        </td>
+            </fieldset>
+          </div>
+​
+          <br />
+          
+          <div>
+            <label for="transmission">Transmission</label>
+            <select id="transmission">
+              <option value="1">choose your option</option>
+              <option value="2">manual</option>
+              <option value="3">automatic</option>
+              
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="age">Initial registration</label>
+            <select id="age">
+              <option value="1">choose your option</option>
+              <option value="2">less than 3 years ago</option>
+              <option value="3">3-5 years ago</option>
+              <option value="4">more than 5 years ago</option>
+              
+            </select>
+          </div>
+          <br />
+          
+          
+          <br />
+          <div>
+            <h4>Second hand</h4>
+            <label for="yes">
+              <input type="radio" id="yes" name="sh" value="second hand" />
+              yes
+            </label>
+            <br />
+            <label for="no">
+              <input type="radio" id="no" name="sh" value="no second hand" /> no
+            </label>
+            <br />
+          </div>
+          <br />
+          <div>Comments</div>
+          <div>
+            <textarea rows="10" id="comment"></textarea>
+          </div>
+          <br />
+          
+          <br>
+            <button onClick="SaveData()">Save</button> </br>
+            <button onClick="calculateTotal()">Price</button>
+            <input name="total" type="text" id="total" value="" /></div>
+        </form>
+      </section>
+      
+    </main>
+​
+    <footer>
+      Best value on our site
+      <address>Hockey str, 9, Seattle</address>
+    </footer>
+      
+
+      
+    </body>
+  </html>
+</head>
