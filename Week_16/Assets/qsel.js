@@ -24,11 +24,18 @@ function displayAll() {
       });
     
     document.getElementsByName('redoutput')[0].value= records;
+    let sum = 0;
+    for(let i = 0; i < records.length; i++)
+{
+    sum = Number(sum) + Number(records[i]);
+}
+document.getElementsByName('sumoutput')[0].value= sum;
+    
     /*
     const InitialValue = 0;
     const sum = records.reduce((acc, current) => acc + current, InitialValue );
     document.getElementsByName('sumoutput')[0].value= sum;
-    */
+    
     let sum = 0;
     //const numbers = [65, 44, 12, 4];
     records.forEach(myFunction);
@@ -38,5 +45,5 @@ function displayAll() {
     function myFunction(item) {
       sum += item;
     }
-    document.getElementsByName('sumoutput')[0].value= sum;
+    document.getElementsByName('sumoutput')[0].value= sum;*/
 }
