@@ -29,25 +29,43 @@
       <section class="left section">
         <form>
           <div>
-            <h1>Here you can calculate the cost</h1>
-            <h2>Please fill out the form</h2>
+          <table>
+            <tr>
+              <th>
+                <h1>Here you can calculate the cost</h1>
+                <h2>Please fill out the form</h2>
+              </th>
+            
+            </tr>
+          
           </div>
           <br /><br /><br /><br />
           <div>
             <br>
-              <legend><b>Engine</b></legend>
+            
+              
+              <th><b>Engine</b></th>
             <filedset>
-              <td>
-              <div>
-                <label for="volume">Engine volume [cm^3]</label>
-                <td><input type="text" id="inputtext" /></td>
-              </div>
+            
+          <th>
+            <div>
+              <label for="volume">Engine volume [cm^3]</label>
+              <input type="text" id="inputtext" />
+            </div>
+          </th>
+              
             </br>
-            <div>Engine type</div>
-          <div>
-            <label for="gasoline">Gasoline</label>
+            <tr>
+            <th>
+              <div>Engine type</div>
+          
+            </th>
+          <th>
+              <label for="gasoline">Gasoline</label>
             <input type="checkbox" id="gasoline" />
-          </div>
+            
+            
+          
           <div>
             <label for="diesel">Diesel</label>
             <input type="checkbox" id="diesel" />
@@ -56,38 +74,56 @@
             <label for="electric">Electric</label>
             <input type="checkbox" id="electric" />
           </div>
-        </td>
-            </fieldset>
+            </th>
+          </tr>
+        </fieldset>
+        
+        
+            
           </div>
 ​
           <br />
           
-          <div>
-            <label for="transmission">Transmission</label>
-            <select id="transmission">
-              <option value="1">choose your option</option>
-              <option value="2">manual</option>
-              <option value="3">automatic</option>
+            <tr>
+              <th>
+                <label for="transmission">Transmission</label>
+                </th>
+                <th>
+              <select id="transmission">
+                <option value="1">choose your option</option>
+                <option value="2">manual</option>
+                <option value="3">automatic</option>
+              </select>
+            </th>
+          </tr>
+      
               
-            </select>
-          </div>
+            
+          
+          
           <br />
-          <div>
+          <tr>
+            <th>
             <label for="age">Initial registration</label>
+            </th>
+            <th>
             <select id="age">
               <option value="1">choose your option</option>
               <option value="2">less than 3 years ago</option>
               <option value="3">3-5 years ago</option>
               <option value="4">more than 5 years ago</option>
-              
+            </th>  
             </select>
-          </div>
+          </tr>
           <br />
           
           
           <br />
-          <div>
+          <tr>
+            <th>
             <h4>Second hand</h4>
+            </th>
+            <th>
             <label for="yes">
               <input type="radio" id="yes" name="sh" value="second hand" />
               yes
@@ -97,19 +133,38 @@
               <input type="radio" id="no" name="sh" value="no second hand" /> no
             </label>
             <br />
-          </div>
+          </th>
+          </tr>
           <br />
-          <div>Comments</div>
+          <tr>
+            <th>
+              <div>Comments</div>
+            </th>
+            <th>
           <div>
             <textarea rows="10" id="comment"></textarea>
           </div>
-          <br />
+            </th>
+          </tr>
           
-          <br>
-            <button onClick="SaveData()">Save</button> </br>
+          <tr>
+            <th>
+              <button onClick="SaveData()">Save</button> </br>
+            </th>
+          </tr>
+          
+
+          <tr>
+            <th>
             <button onClick="calculateTotal()">Price</button>
-            <input name="total" type="text" id="total" value="" /></div>
-        </form>
+            </th>
+            <th>
+            <input name="total" type="text" id="total" value="" />
+            </th>
+          </tr>
+            
+          </table>
+          </form>
       </section>
       
     </main>

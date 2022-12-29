@@ -37,3 +37,7 @@ aside {
     height: 100%;
     background-color: lightgrey;
   }
+  table, td, th {
+    border: 1px solid;
+    width: 100%;
+  }
