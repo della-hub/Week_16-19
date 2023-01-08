@@ -1,4 +1,4 @@
-function addRecord() {
+function saveData() {
     let record = document.querySelector('#inputtext').value;
 
     if (!record) {
@@ -9,7 +9,7 @@ function addRecord() {
     document.querySelector('#inputtext').value = '';
 }
 
-function updateTotal() {
+function calculateTotal() {
     var total = 0;//
     var list = document.getElementsByClassName("inputtext");
     var values = [];
