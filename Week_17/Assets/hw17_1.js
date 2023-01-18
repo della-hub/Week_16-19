@@ -1,6 +1,6 @@
-let addButton = document.querySelector('#add');
+/*let addButton = document.querySelector('#add');
 let suminputButton = document.querySelector('#display');
-let numbers = [];
+let namefull = [];
 
 addButton.addEventListener('click', addNumber);
 displayButton.addEventListener('click', sortAll);
@@ -23,4 +23,12 @@ function sortAll() {
     })
     document.getElementsByName('arraysorted')[0].value= sortednumbers;
 } 
+}*/
+function addRecord() {
+    
+    let names = document.getElementById('namefull').value;
+    let namesarray = names.split(" ");
+alert (namesarray);
 }
+
+let addButton = document.getElementById('input').value;
