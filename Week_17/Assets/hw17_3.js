@@ -36,22 +36,38 @@ function addDate() {
 
 function formatDate() {
     let newDate = new Date();
-    console.log(newDate);
+    let myYear = newDate.getFullYear();
+    let myMonth = newDate.getMonth()+1;
+    let myDay = newDate.getDate();
+    let myTime = newDate.getHours();
+    let myMinute = newDate.getMinutes();
+    if (myDay < 10) {
+        myDay = '0' + myDay;
+    }
+    if (myMonth < 10) {
+        myMonth = '0' + myMonth;
+    }
+    if (myMinute < 10) {
+        myMinute = '0' + myMinute;
+    }
+    let myDate = myDay.toString() + "." + myMonth.toString() + "." + myYear.toString() + " "  + myTime.toString() + ":" + myMinute.toString();
+    console.log(myDate);
     let compared = document.getElementById('comparison');
     let diff = newDate - now;
+    
     console.log(diff);
     
 
     if (diff < 1000) {
         compared.innerHTML = compared.innerHTML + "right now" + "<br>";
     } else if (diff < 60000) {
-        compared.innerHTML = compared.innerHTML + Number(diff)/1000 + " seconds" + "<br>";
+        compared.innerHTML = compared.innerHTML + Math.trunc(Number(diff)/1000) + " seconds" + "<br>";
     } else if (diff < 3600000) {
-        compared.innerHTML = compared.innerHTML + Number(diff)/360000 + "<br>";
+        compared.innerHTML = compared.innerHTML + Math.trunc(Number(diff)/360000) + " minutes" + "<br>";
     } 
     
     else {
-        compared.innerHTML = compared.innerHTML + newDate - 86400 * 4 * 1000 + "<br>";
+        compared.innerHTML = compared.innerHTML + myDate + "<br>";
     } 
         
     }
