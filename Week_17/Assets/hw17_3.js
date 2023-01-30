@@ -24,10 +24,12 @@ function sortAll() {
     document.getElementsByName('arraysorted')[0].value= sortednumbers;
 } 
 }*/
+
+let now = new Date();
 function addDate() {
-    let now = new Date();
     let output = document.getElementById('datenow');
     output.innerHTML = output.innerHTML + now;
+    
     console.log(now);
     
 }
@@ -36,20 +38,27 @@ function formatDate() {
     let newDate = new Date();
     console.log(newDate);
     let compared = document.getElementById('comparison');
-    let diff = newDate - outputdate;
-    compared.innerHTML = compared.innerHTML + diff;
+    let diff = newDate - now;
+    console.log(diff);
+    
 
-    // if (newDate == now) {
-    //     let diff1 = "right now";
-    // } else if (newDate > now) {
-    //     let diff2 = "in the past";
-    // } else (newDate < now) {
-    //     let diff3 = "in the future";
-    // }
+    if (diff < 1000) {
+        compared.innerHTML = compared.innerHTML + "right now" + "<br>";
+    } else if (diff < 60000) {
+        compared.innerHTML = compared.innerHTML + Number(diff)/1000 + " seconds" + "<br>";
+    } else if (diff < 3600000) {
+        compared.innerHTML = compared.innerHTML + Number(diff)/360000 + "<br>";
+    } 
+    
+    else {
+        compared.innerHTML = compared.innerHTML + newDate - 86400 * 4 * 1000 + "<br>";
+    } 
+        
+    }
 
     
     
-}
+
 // function addRecord() {
 //     let name = document.getElementById('namefull').value;
 //     name = name.trim();
