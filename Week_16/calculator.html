@@ -7,9 +7,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <link rel="stylesheet" href="/Assets/Styles/calculator.css" />
-      <script src="Assets/calculator.js"></script>
     </head>
     <body>
+      <!-- <label for="gasoline">Gasoline</label>
+      <input type="checkbox" id="gasoline" /> -->
+      
       <header>Calculator of the car cost</header>
     <br />
     
@@ -29,28 +31,32 @@
       <section class="left section">
         <form>
           <div>
-          <table>
-            <tr>
-              <th>
-                <h1>Here you can calculate the cost</h1>
-                <h2>Please fill out the form</h2>
-              </th>
-            
-            </tr>
-          
+            <h1>Here you can calculate the cost</h1>
+            <h2>Please fill out the form</h2>
           </div>
+          <table>
+            
+          
+         
           <br /><br /><br /><br />
           <div>
             <br>
             
               
-              <th><b>Engine</b></th>
             <filedset>
             
           <th>
             <div>
               <label for="volume">Engine volume [cm^3]</label>
-              <input type="text" id="inputtext" />
+              <th>
+                <select id="volume">
+                  <option value="1">choose your option</option>
+                  <option value="2">less than 1.0</option>
+                  <option value="3">1.0 - 2.0</option>
+                  <option value="4">2.0 - 3.0</option>
+                  <option value="5">more than 3.0</option>
+                </th>  
+                </select>
             </div>
           </th>
               
@@ -61,29 +67,19 @@
           
             </th>
           <th>
-              <label for="gasoline">Gasoline</label>
-            <input type="checkbox" id="gasoline" />
+              <label for="gasoline">
+                <input type="radio" id="gasoline" name="eng" value = "gasoline"/>Gasoline
+              </label>
+              <br>
+              <label for="diesel">
+                <input type="radio" id="diesel" name="eng" value = "diesel"/>Diesel
+              </label>
+              <br>
+              <label for="electric">
+                <input type="radio" id="electric" name="eng" value = "electric"/>Electric
+              </label>
             
-            
-          
-          <div>
-            <label for="diesel">Diesel</label>
-            <input type="checkbox" id="diesel" />
-          </div>
-          <div>
-            <label for="electric">Electric</label>
-            <input type="checkbox" id="electric" />
-          </div>
             </th>
-          </tr>
-        </fieldset>
-        
-        
-            
-          </div>
-​
-          <br />
-          
             <tr>
               <th>
                 <label for="transmission">Transmission</label>
@@ -96,11 +92,6 @@
               </select>
             </th>
           </tr>
-      
-              
-            
-          
-          
           <br />
           <tr>
             <th>
@@ -116,8 +107,6 @@
             </select>
           </tr>
           <br />
-          
-          
           <br />
           <tr>
             <th>
@@ -135,26 +124,40 @@
             <br />
           </th>
           </tr>
+          </table>
+        </form>
+
+          
+            </th>
+          </tr>
+        </fieldset>
+        
+        
+            
+          </div>
+​
+          <br />
+ 
           <br />
           <tr>
             <th>
-              <div>Comments</div>
+              <div>Calculated cost</div>
             </th>
             <th>
           <div>
-            <textarea rows="10" id="comment"></textarea>
+            <textarea rows="10" id="cost"></textarea>
           </div>
             </th>
           </tr>
           
           <tr>
             <th>
-              <button onClick="SaveData()">Save</button> </br>
+              <button onClick="saveData()">Save</button> </br>
             </th>
           </tr>
-          
+           
 
-          <tr>
+      <tr>
             <th>
             <button onClick="calculateTotal()">Price</button>
             </th>
@@ -163,9 +166,9 @@
             </th>
           </tr>
             
-          </table>
+          
           </form>
-      </section>
+      </section> 
       
     </main>
 ​
@@ -175,7 +178,7 @@
     </footer>
       
 
-      
+      <script src="Assets/calculator.js"></script>
     </body>
   </html>
 </head>
