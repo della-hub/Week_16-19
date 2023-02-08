@@ -44,3 +44,5 @@ aside {
     border: 1px solid;
     width: 100%;
   }
+
+  .required { border: 1px solid red; }

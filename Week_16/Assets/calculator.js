@@ -1,12 +1,13 @@
 "use strict";
 
-Array.from(document.getElementsByTagName("input")).forEach(function(item) {
-   item.addEventListener("change", calculateTotal);
+Array.from(document.querySelectorAll("input, select")).forEach(function(item) {
+   item.addEventListener("change", saveData);
 });
 
 function saveData() {
     
     let volume = document.querySelector('#volume').value;
+    hideError('#volume');
     if (volume === "2") {
         volume = "10";
     } else if (volume === "3") {
@@ -15,11 +16,15 @@ function saveData() {
         volume = "30";
     } else if (volume === "5") {
         volume = "40";
+    } else if (volume==="1") {
+        showError("#volume");
     }
     else {
-        alert("select an engine volume");
+        showError("#volume");
     } 
+
     let age = document.querySelector('#age').value;
+    hideError('#age');
     if (age === "2") {
         age = "50";
     } else if (age === "3") {
@@ -27,24 +32,34 @@ function saveData() {
     } else if (age === "4") {
         volume = "100";
     } else {
-        alert("select an initial registration timeframe");
+        showError("#age");
     } 
+
+    hideError('#transmission');
     let transmission = document.querySelector('#transmission').value;
     if (transmission === "2") {
         transmission = "0.5";
     } else if (transmission === "3") {
         transmission = "1";
     } else {
-        alert("select a transmission type");
+        showError("#transmission");
+    }
+    
+    if (document.querySelectorAll('input[name=sh]:checked').length === 0) {
+        alert("please confirm if the car is new");
+        return;
     } 
     let secondhand = document.querySelector('input[name=sh]:checked').value;
     if (secondhand === "second hand") {
         secondhand = "0.75";
     } else if (secondhand === "no second hand") {
         secondhand = "1";
-    } else {
-        alert("please confirm if the car is new");
     }
+    
+    if (document.querySelectorAll('input[name=eng]:checked').length === 0) {
+        showError("input[name=eng]");
+        return;
+    } 
     let enginetype = document.querySelector('input[name=eng]:checked').value;
     if (enginetype === "gasoline") {
         enginetype = "5";
@@ -52,12 +67,12 @@ function saveData() {
         enginetype = "3";
     } else if (enginetype === "electric") {
         enginetype = "1";
-    } else {
-        alert("select your engine");
-    }
+    } 
+
 
     let cost = document.getElementById("cost");
-    cost.innerHTML = cost.innerHTML + volume + age + transmission + secondhand + enginetype;
+
+    cost.innerHTML = Number(volume) + Number(age) + Number(transmission) + Number(secondhand) + Number(enginetype);
 
     // $('input, select').each(function() {
     //     if($(this).val() == ''){
@@ -78,16 +93,12 @@ function saveData() {
     // document.querySelector('#inputtext').value = '';
 }
 
-function calculateTotal() {
-    console.log('28');
-    // var total = 0;
-    // var list = document.getElementsByClassName("inputtext");
-    // var values = [];
-    // for(var i = 0; i < list.length; ++i) {
-    //     values.push(parseFloat(list[i].value));
-    // }
-    // total = values.reduce(function(previousValue, currentValue, index, array){
-    //     return previousValue + currentValue;
-    // });
-    // document.getElementById("total").value = total;    
+function showError(field) {
+    document.querySelector(field).setCustomValidity("Required field")
+    document.querySelector(field).classList.add("required");
+}
+
+function hideError(field) {
+    document.querySelector(field).setCustomValidity("")
+    document.querySelector(field).classList.remove("required");
 }
