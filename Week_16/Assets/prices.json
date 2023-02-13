@@ -1,0 +1,9 @@
+[
+    {
+        "type": "engine",
+        "values": [
+            {"benzin": 100},
+            {"diesel": 200}
+        ]
+    }
+]
