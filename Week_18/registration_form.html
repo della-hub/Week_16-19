@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Assets/Styles/registration_form.css" />
+  </head>
+  <body>
+    <div id="elem">
+      <div id="elem-content">
+        <button onclick="myFunction()">push me</button>
+        <div>
+          <fieldset>
+            <legend><b>Registration form</b></legend>
+            <form id="form" onsubmit="return false;">
+              <label for="name">Name:</label>
+              <input type="text" id="name" />
+              <br /><br />
+              <label for="age">Age:</label>
+              <input type="text" id="age" />
+              <br /><br />
+              <label for="sex">Sex:</label>
+              <input type="text" id="sex" />
+              <br /><br />
+              <label for="city">City:</label>
+              <input type="text" id="city" />
+              <br /><br />
+              <label for="color">Favorite color:</label>
+              <input type="text" id="color" />
+              <br /><br />
+              <input
+                type="submit"
+                value="Submit information"
+                onclick="myFunction2();"
+              />
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+    <div id="elem1">
+      <button onclick="myotherFunction()">push me</button>
+      <fieldset>
+        <legend><b>Calculator</b></legend>
+
+        <div>
+          <form id="formcalc" onsubmit="return false;">
+            <label for="firstnumber">First number</label>
+            <input type="text" id="firstnumber" />
+
+            <label for="secondnumber">Second number</label>
+            <input type="text" id="secondnumber" />
+
+            <input type="submit" value="Sum" onclick="plusFunction();" />
+            <label for="summarize">Summarize</label>
+            <input type="text" id="summarize" />
+
+            <input type="submit" value="Minus" onclick="minusFunction();" />
+            <input type="submit" value="Multiply" onclick="multiFunction();" />
+            <input type="submit" value="Divide" onclick="divFunction();" />
+          </form>
+        </div>
+      </fieldset>
+    </div>
+    ​
+    <script src="Assets/registration_form.js"></script>
+  </body>
+</html>

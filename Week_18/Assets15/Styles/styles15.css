@@ -1,0 +1,54 @@
+aside {
+    width: 10%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: left;
+    font-style: italic;
+    background-color: lightgreen;
+  }
+
+  main {
+    width: 80%;
+    padding-left: 15px;
+    margin-left: 210px;
+    font-style: normal;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    width: 95%;
+    padding-left: 15px;
+    margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    background-color: lightgreen;
+  }
+  .section {
+    width: 50%;
+    height: 100%;
+  }
+  button {
+    background-color: yellowgreen;
+  }
+  /*input {
+    position: absolute; 
+    top: 30%; 
+    left: 5%; 
+    width: 10%
+  }
+label {
+    position: absolute; 
+    top: 30%; 
+    left: 0%; 
+    width: 10%"
+}
+  fieldset {
+    width: 35%;
+    height: 100%;
+    background-color: lightgrey;
+  }*/
+
+  
